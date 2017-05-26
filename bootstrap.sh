@@ -34,8 +34,7 @@ cd OpenARC
 aclocal && autoconf && autoreconf --install && automake --add-missing && ./configure && make all
 
 echo "Finalizing"
-cd ~
-chmod og-r misc/key.pem
-chmod og-r misc/openarc.conf
-mkdir tmp
-mkdir pids
+chmod og-r /home/vagrant/misc/key.pem
+chmod og-r /home/vagrant/misc/openarc.conf
+mkdir /home/vagrant/tmp
+mkdir /home/vagrant/pids
