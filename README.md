@@ -19,3 +19,20 @@ vagrant up
 vagrant ssh
 ```
 * OpenARC should compile, and the test suite should be setup as well!
+
+## Things
+
+* To run openarc (ex.)
+```
+sudo /home/vagrant/OpenARC/openarc/openarc -c /home/vagrant/misc/openarc.conf -f -l -t /home/vagrant/misc/test1.msg
+```
+* To run the test suite
+```
+cd arc_test_suite
+./testarc.py validate runners/validateopenarc.py
+```
+* To entirely reconfigure & rebuild OpenARC
+```
+cd OpenARC
+aclocal && autoconf && autoreconf --install && automake --add-missing && ./configure && make all
+```
