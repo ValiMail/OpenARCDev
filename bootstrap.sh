@@ -36,3 +36,5 @@ aclocal && autoconf && autoreconf --install && automake --add-missing && ./confi
 echo "Finalizing"
 chmod og-r misc/key.pem
 chmod og-r misc/openarc.conf
+mkdir tmp
+mkdir pids
