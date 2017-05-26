@@ -6,7 +6,7 @@
 * Install Vagrant
 * Setup local SSH Agent forwarding
 ```
-key_file=~/.ssh/id_rs
+key_file=~/.ssh/id_rsa
 [[ -z $(ssh-add -L | grep $key_file) ]] && ssh-add $key_file
 ```
 * Start the box
