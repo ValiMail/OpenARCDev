@@ -34,6 +34,7 @@ cd OpenARC
 aclocal && autoconf && autoreconf --install && automake --add-missing && ./configure && make all
 
 echo "Finalizing"
+cd ~
 chmod og-r misc/key.pem
 chmod og-r misc/openarc.conf
 mkdir tmp
