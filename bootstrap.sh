@@ -19,11 +19,20 @@ StrictHostKeyChecking no
 EOF
 
 ssh-keyscan -H github.com >> ~/.ssh/known_hosts
-git clone git@github.com:ValiMail/OpenARC.git
+
+git clone git@github.com:ValiMail/OpenARC.git temp
+mv temp/* OpenARC
+rm -rf temp
 
 echo "Cloning Test Suite"
-
+git clone git@github.com:ValiMail/arc_test_suite.git temp
+mv temp/* arc_test_suite
+rm -rf temp
 
 echo "Building OpenARC"
 cd OpenARC
 aclocal && autoconf && autoreconf --install && automake --add-missing && ./configure && make all
+
+echo "Finalizing"
+chmod og-r misc/key.pem
+chmod og-r misc/openarc.conf
