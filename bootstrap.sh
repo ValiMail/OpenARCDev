@@ -38,3 +38,6 @@ chmod og-r /home/vagrant/misc/key.pem
 chmod og-r /home/vagrant/misc/openarc.conf
 mkdir /home/vagrant/tmp
 mkdir /home/vagrant/pids
+
+echo "Adding local DNS resolver"
+sudo 'nameserver 127.0.0.1' >> /etc/resolv.conf
