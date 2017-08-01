@@ -3,7 +3,7 @@
 ## How
 
 * Clone me
-* Install Vagrant
+* Install Vagrant (```brew cask install vagrant```)
 * Setup local SSH Agent forwarding
 ```
 key_file=~/.ssh/id_rsa
