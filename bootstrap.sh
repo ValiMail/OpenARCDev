@@ -21,11 +21,13 @@ EOF
 ssh-keyscan -H github.com >> ~/.ssh/known_hosts
 
 git clone git@github.com:ValiMail/OpenARC.git temp
+mv temp/.git* OpenARC
 mv temp/* OpenARC
 rm -rf temp
 
 echo "Cloning Test Suite"
 git clone git@github.com:ValiMail/arc_test_suite.git temp
+mv temp/.git* arc_test_suite
 mv temp/* arc_test_suite
 rm -rf temp
 
