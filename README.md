@@ -3,8 +3,10 @@
 ## How
 
 * Clone me
-* Install Vagrant
+* Install Vagrant (```brew cask install vagrant```)
 * Setup local SSH Agent forwarding
+
+Note: replace id_rsa with whatever key you use for GH checkout.
 ```
 key_file=~/.ssh/id_rsa
 [[ -z $(ssh-add -L | grep $key_file) ]] && ssh-add $key_file
