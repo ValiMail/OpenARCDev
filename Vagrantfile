@@ -18,6 +18,7 @@ Vagrant.configure("2") do |config|
   config.vm.synced_folder "misc", "/home/vagrant/misc"
   config.ssh.forward_agent = true
   config.vm.provision :shell, path: "bootstrap.sh"
+  config.vm.provision :shell, path: "update_resolv.sh", run: 'always'
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
