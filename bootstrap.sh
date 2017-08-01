@@ -40,4 +40,6 @@ mkdir /home/vagrant/tmp
 mkdir /home/vagrant/pids
 
 echo "Adding local DNS resolver"
-sudo 'nameserver 127.0.0.1' >> /etc/resolv.conf
+sudo su
+echo 'nameserver 127.0.0.1' >> /etc/resolv.conf
+exit
