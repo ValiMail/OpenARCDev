@@ -1,2 +1,2 @@
 echo "Adding local DNS resolver"
-sudo mv misc /etc/resolv.conf
+sudo mv misc/resolv.conf /etc/resolv.conf
