@@ -1,0 +1,6 @@
+[submodule "OpenARC"]
+	path = OpenARC
+	url = https://github.com/ValiMail/OpenARC.git
+[submodule "arc_test_suite"]
+	path = arc_test_suite
+	url = https://github.com/ValiMail/arc_test_suite.git
