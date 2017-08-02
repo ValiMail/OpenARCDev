@@ -1,28 +1,29 @@
 # OpenARC Vagrant Development environment
 
-## How
+## Setup
 
-* Clone me
-* Install Vagrant (```brew cask install vagrant```)
-* Setup local SSH Agent forwarding
+1. Clone `git clone git@github.com:ValiMail/OpenARCDev.git`
+2. Pull in submodules
+```
+git submodule init
+git submodule update
+```
 
-Note: replace id_rsa with whatever key you use for GH checkout.
-```
-key_file=~/.ssh/id_rsa
-[[ -z $(ssh-add -L | grep $key_file) ]] && ssh-add $key_file
-```
-* Start the box
-```
+3. Install Vagrant `brew cask install vagrant`
+4. Start the environment
+```bash
 cd OpenARCDev
 vagrant up
 ```
-* SSH in
-```
-vagrant ssh
-```
-* OpenARC should compile, and the test suite should be setup as well!
+5. SSH in `vagrant ssh`
 
-## Things
+6. OpenARC should compile, and the test suite should be setup as well!
+
+## Developing
+
+Once you finish provisioning you can run `vagrant ssh` and you should end up in the root dir of the vagrant user. In there, you should see two important shared folders: `OpenARC/` and `arc_test_suite/`. These are shared folders with your local machine.
+
+## Other Notes
 
 * To entirely reconfigure & rebuild OpenARC
 ```
