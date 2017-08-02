@@ -34,7 +34,11 @@ aclocal && autoconf && autoreconf --install && automake --add-missing && ./confi
 ```
 sudo /home/vagrant/OpenARC/openarc/openarc -c /home/vagrant/misc/openarc.conf -f -l -t /home/vagrant/misc/test1.msg
 ```
-* To run the test suite
+* To run the test validation suite
 ```
 sudo ./testarc.py -p 53 validate runners/validateopenarc.py
+```
+* To run the signing suite
+```
+sudo ./testarc.py -p 53 sign runners/signopenarc.py
 ```
