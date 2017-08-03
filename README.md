@@ -5,6 +5,7 @@
 1. Clone `git clone git@github.com:ValiMail/OpenARCDev.git`
 2. Pull in submodules
 ```
+cd OpenARCDev
 git submodule init
 git submodule update
 ```
@@ -27,7 +28,7 @@ Once you finish provisioning you can run `vagrant ssh` and you should end up in 
 
 * To entirely reconfigure & rebuild OpenARC
 ```
-cd OpenARC
+cd ~/OpenARC
 aclocal && autoconf && autoreconf --install && automake --add-missing && ./configure && make all
 ```
 
@@ -37,9 +38,11 @@ sudo /home/vagrant/OpenARC/openarc/openarc -c /home/vagrant/misc/openarc.conf -f
 ```
 * To run the test validation suite
 ```
+cd ~/arc_test_suite
 sudo ./testarc.py -p 53 validate runners/validateopenarc.py
 ```
 * To run the signing suite
 ```
+cd ~/arc_test_suite
 sudo ./testarc.py -p 53 sign runners/signopenarc.py
 ```
